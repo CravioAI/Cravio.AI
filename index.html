@@ -8,12 +8,24 @@
   <title>CRAVIO.AI — Turning Ideas Into Digital Reality</title>
   <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#070707;--card:#111;--line:#262626;--text:#f5f5f5;--muted:#a2a2a2;--accent:#c9ff42}
+:root{
+  --bg:#070B14;
+  --card:#101727;
+  --line:#202B40;
+  --text:#F7F9FC;
+  --muted:#9AA6B8;
+  --accent:#6C63FF;
+  --accent2:#00D4FF;
+}
 html{scroll-behavior:smooth}
 body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 .navbar{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 6%;position:sticky;top:0;z-index:20;background:rgba(7,7,7,.86);backdrop-filter:blur(14px);border-bottom:1px solid #171717}
-.logo{font-size:1.35rem;font-weight:900;letter-spacing:-.04em}.logo span{color:var(--accent)}
+.logo{font-size:1.35rem;font-weight:900;letter-spacing:-.04em}.logo span{
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 .nav-links{display:flex;align-items:center;gap:28px;font-size:.9rem;color:#ccc}.nav-links a:hover{color:var(--accent)}.nav-cta{border:1px solid #444;padding:9px 17px;border-radius:99px;color:#fff!important}
 .menu-btn{display:none;background:none;border:0;color:white;font-size:1.6rem}
 .hero{min-height:calc(100vh - 76px);display:flex;align-items:center;position:relative;padding:90px 6%;overflow:hidden}
@@ -39,7 +51,10 @@ footer{padding:50px 6% 25px;border-top:1px solid var(--line);color:#777}.footer-
 </head>
 <body>
   <header class="navbar">
-    <a class="logo" href="#home">CRAVIO<span>.AI</span></a>
+    <a class="logo" href="#home">
+  <span class="logo-mark">C</span>
+  CRAVIO<span>.AI</span>
+    </a>
     <button class="menu-btn" aria-label="Open menu">☰</button>
     <nav class="nav-links">
       <a href="#home">Home</a>
@@ -72,7 +87,7 @@ footer{padding:50px 6% 25px;border-top:1px solid var(--line);color:#777}.footer-
     </section>
 
     <section class="stats">
-      <div><strong>10+</strong><span>Digital Services</span></div>
+      <div><strong>100+</strong><span>Digital Services</span></div>
       <div><strong>AI</strong><span>Powered Creativity</span></div>
       <div><strong>24/7</strong><span>Online Presence</span></div>
       <div><strong>∞</strong><span>Creative Possibilities</span></div>
