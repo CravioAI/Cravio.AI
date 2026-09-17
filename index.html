@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="CRAVIO.AI - Creative, Vision & AI">
+<title>CRAVIO.AI | Turning Ideas Into Digital Reality</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#070707;color:#fff;line-height:1.6}
+:root{--a:#c9ff42;--p:#8b5cf6;--c:#22d3ee;--m:#aaa}
+a{text-decoration:none;color:inherit}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#080808ee;border-bottom:1px solid #222}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:21px}.logo img{width:46px;height:46px;object-fit:contain}.logo b{color:var(--a)}
+nav{display:flex;gap:22px}nav a{font-size:14px;color:#ddd}nav a:hover{color:var(--a)}
+.menu{display:none;background:none;border:0;color:#fff;font-size:28px}
+.hero{min-height:88vh;display:grid;place-items:center;text-align:center;padding:70px 0;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,#7c3aed44,transparent 65%);top:-180px;left:-180px}
+.hero>*{position:relative}.hero img{width:145px;height:145px;object-fit:contain;margin:auto auto 22px}
+.badge{display:inline-block;color:var(--a);border:1px solid #333;border-radius:30px;padding:6px 14px;font-size:12px;letter-spacing:2px}
+h1{font-size:clamp(40px,7vw,76px);line-height:1.03;letter-spacing:-3px;margin:18px 0}
+.grad{background:linear-gradient(90deg,var(--a),var(--c),var(--p));-webkit-background-clip:text;color:transparent}
+.hero p{max-width:680px;color:#bbb;margin:auto;font-size:17px}.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:12px 20px;border-radius:10px;border:1px solid #333;font-weight:700;font-size:14px}.primary{background:var(--a);color:#080808;border-color:var(--a)}
+section{padding:78px 0}.head{text-align:center;margin-bottom:38px}.head span{color:var(--a);font-size:12px;letter-spacing:2px;text-transform:uppercase}.head h2{font-size:clamp(30px,5vw,46px);margin:5px}.head p{color:var(--m)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(145deg,#151517,#0d0d0f);border:1px solid #29292d;border-radius:18px;padding:23px}.card:hover{border-color:#555;transform:translateY(-3px)}.icon{font-size:27px;margin-bottom:8px}.card p{color:#aaa;font-size:14px}
+.type{color:var(--a);font-size:11px;text-transform:uppercase;letter-spacing:1px}.price{font-size:28px;font-weight:800;margin:8px 0}.price small{font-size:11px;color:#999;font-weight:400}.features{list-style:none;color:#aaa;font-size:13px;margin:12px 0 18px}.features li{margin:5px 0}.features li:before{content:"✓";color:var(--a);margin-right:7px}.card .btn{display:block;text-align:center}
+.filters{text-align:center;margin-bottom:20px}.filter{background:#111;color:#aaa;border:1px solid #333;border-radius:20px;padding:8px 14px;margin:4px;cursor:pointer;font-size:12px}.filter.active{background:var(--a);color:#000}
+.slider{overflow:hidden;border-radius:18px;border:1px solid #292929}.track{display:flex;transition:.45s}.slide{min-width:100%;position:relative}.slide img{width:100%;height:450px;object-fit:cover}.caption{position:absolute;bottom:18px;left:18px;background:#000c;padding:8px 13px;border-radius:9px;font-weight:700}.controls{text-align:center;margin-top:14px}.circle{width:40px;height:40px;border-radius:50%;background:#151515;color:#fff;border:1px solid #444;margin:4px;cursor:pointer}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{padding:22px 18px 22px 58px;position:relative}.step:before{content:attr(data-n);position:absolute;left:15px;top:20px;width:32px;height:32px;border-radius:50%;background:var(--a);color:#000;display:grid;place-items:center;font-weight:800}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact{text-align:center;max-width:800px;margin:auto}.contact-links{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:22px}.contact-link{padding:12px 17px;background:#111;border:1px solid #333;border-radius:10px;font-size:14px}.contact-link:hover{color:var(--a);border-color:var(--a)}
+footer{border-top:1px solid #222;text-align:center;padding:25px;color:#777;font-size:12px}footer strong{color:#fff}
+#top{position:fixed;right:18px;bottom:18px;background:#151515;color:#fff;border:1px solid #444;border-radius:50%;width:42px;height:42px;display:none}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}}
+@media(max-width:650px){.menu{display:block}nav{display:none;position:absolute;top:70px;left:0;width:100%;background:#090909;padding:16px 5%;flex-direction:column;border-bottom:1px solid #222}nav.open{display:flex}.grid,.steps{grid-template-columns:1fr}.hero{min-height:82vh;padding:50px 0}.hero img{width:110px;height:110px}h1{letter-spacing:-2px}.hero p{font-size:15px}section{padding:60px 0}.slide img{height:290px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#home"><img src="cravio-logo.webp" alt="CRAVIO.AI Logo"><span><b>CRAVIO</b>.AI</span></a>
+<button class="menu" id="menu">☰</button>
+<nav id="nav"><a href="#home">Home</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#work">Work</a><a href="#process">Process</a><a href="#about">About</a><a href="#contact">Let's Talk</a></nav>
+</div></header>
+
+<section class="hero" id="home"><div>
+<img src="cravio-logo.webp" alt="CRAVIO 3D Logo">
+<div class="badge">CREATIVE • VISION • AI</div>
+<h1>Turning Ideas Into<br><span class="grad">Digital Reality.</span></h1>
+<p>CRAVIO.AI is an AI-powered creative agency for branding, design, editing, marketing and digital solutions.</p>
+<div class="buttons"><a class="btn primary" href="#services">Explore Services</a><a class="btn" href="https://wa.me/916295637176" target="_blank">Start a Project →</a></div>
+</div></section>
+
+<section id="services"><div class="wrap">
+<div class="head"><span>What we do</span><h2>Creative Services</h2><p>Professional creative and digital solutions for businesses, creators and events.</p></div>
+<div class="grid">
+<div class="card"><div class="icon">✦</div><h3>Logo & Brand Identity</h3><p>Professional logos and complete visual identity.</p></div>
+<div class="card"><div class="icon">▣</div><h3>Social Media Design</h3><p>Posts, carousels and promotional creatives.</p></div>
+<div class="card"><div class="icon">◉</div><h3>Social Media Ads</h3><p>Creative ads for Instagram and Facebook.</p></div>
+<div class="card"><div class="icon">⌖</div><h3>Google Business Growth</h3><p>Visual and content support for your profile.</p></div>
+<div class="card"><div class="icon">▶</div><h3>Reel & Video Editing</h3><p>Short-form edits and promotional videos.</p></div>
+<div class="card"><div class="icon">▤</div><h3>YouTube Thumbnail Design</h3><p>Click-focused thumbnails for creators.</p></div>
+<div class="card"><div class="icon">▰</div><h3>Poster & Banner Design</h3><p>Digital and promotional designs.</p></div>
+<div class="card"><div class="icon">⌂</div><h3>Real Estate Visuals</h3><p>Property creatives and listing graphics.</p></div>
+<div class="card"><div class="icon">♡</div><h3>Wedding & Event Invitation</h3><p>Elegant digital invitations and videos.</p></div>
+<div class="card"><div class="icon">▦</div><h3>Presentation Design</h3><p>Modern business and academic presentations.</p></div>
+<div class="card"><div class="icon">✧</div><h3>AI Content Creation</h3><p>AI-assisted visuals and creative content.</p></div>
+<div class="card"><div class="icon">⌘</div><h3>Website Design</h3><p>Responsive landing pages and business websites.</p></div>
+<div class="card"><div class="icon">◎</div><h3>Social Media Management</h3><p>Content planning and social media support.</p></div>
+</div></div></section>
+
+<section id="pricing"><div class="wrap">
+<div class="head"><span>Starting prices</span><h2>Basic • Standard • Premium</h2><p>Editable starting prices. Final quotation depends on scope and requirements.</p></div>
+<div class="grid">
+<div class="card"><div class="type">Logo & Brand Identity</div><h3>Basic / Standard / Premium</h3><div class="price">₹199 <small>/ ₹499 / ₹999</small></div><ul class="features"><li>Logo concept</li><li>Logo variations</li><li>Mini brand identity</li></ul><a class="btn primary" href="#contact">Enquire</a></div>
+<div class="card"><div class="type">Social Media Design</div><h3>Basic / Standard / Premium</h3><div class="price">₹199 <small>/ ₹499 / ₹999</small></div><ul class="features"><li>1 creative</li><li>3 creatives</li><li>6 creatives</li></ul><a class="btn primary" href="#contact">Enquire</a></div>
+<div class="card"><div class="type">Social Media Ads</div><h3>Basic / Standard / Premium</h3><div class="price">₹499 <small>/ ₹1,499 / ₹2,999+</small></div><ul class="features"><li>Ad creative</li><li>Ad variations</li><li>Campaign support</li></ul><a class="btn primary" href="#contact">Enquire</a></div>
+<div class="card"><div class="type">Google Business Growth</div><h3>Basic / Standard / Premium</h3><div class="price">₹499 <small>/ ₹999 / ₹1,999+</small></div><ul class="features"><li>Profile support</li><li>Content support</li><li>Growth package</li></ul><a class="btn primary" href="#contact">Enquire</a></div>
+<div class="card"><div class="type">Reel & Video Editing</div><h3>Basic / Standard / Premium</h3><div class="price">₹149 <small>/ ₹399 / ₹799</small></div><ul class="features"><li>Basic edit</li><li>Text & transitions</li><li>Advanced edit</li></ul><a class="btn primary" href="#contact">Enquire</a></div>
+<div class="card"><div class="type">YouTube Thumbnail</div><h3>Basic / Standard / Premium</h3><div class="price">₹399 <small>/ ₹999 / ₹1,999</small></div><ul class="features"><li>1 thumbnail</li><li>Multiple concepts</li><li>Premium set</li></ul><a class="btn primary" href="#contact">Enquire</a></div>
+<div class="card"><div class="type">Poster & Banner Design</div><h3>Basic / Standard / Premium</h3><div class="price">₹299 <small>/ ₹699 / ₹1,499</small></div><ul class="features"><li>Basic poster</li><li>Multiple sizes</li><li>Campaign set</li></ul><a class="btn primary" href="#contact">Enquire</a></div>
+<div class="card"><div class="type">Real Estate Visuals</div><h3>Basic / Standard / Premium</h3><div class="price">₹999 <small>/ ₹2,499 / ₹4,999+</small></div><ul class="features"><li>Property creative</li><li>Listing set</li><li>Premium marketing set</li></ul><a class="btn primary" href="#contact">Enquire</a></div>
+<div class="card"><div class="type">Wedding & Event Invitation</div><h3>Basic / Standard / Premium</h3><div class="price">₹999 <small>/ ₹1,999 / ₹3,999+</small></div><ul class="features"><li>Digital invitation</li><li>Animated version</li><li>Premium set</li></ul><a class="btn primary" href="#contact">Enquire</a></div>
+<div class="card"><div class="type">Presentation Design</div><h3>Basic / Standard / Premium</h3><div class="price">₹399 <small>/ ₹999 / ₹1,999+</small></div><ul class="features"><li>Basic deck</li><li>Styled deck</li><li>Premium deck</li></ul><a class="btn primary" href="#contact">Enquire</a></div>
+<div class="card"><div class="type">AI Content Creation</div><h3>Basic / Standard / Premium</h3><div class="price">₹199 <small>/ ₹499 / ₹999</small></div><ul class="features"><li>AI creative</li><li>Content set</li><li>Premium content pack</li></ul><a class="btn primary" href="#contact">Enquire</a></div>
+<div class="card"><div class="type">Website Design</div><h3>Basic / Standard / Premium</h3><div class="price">₹1,999 <small>/ ₹4,999 / ₹9,999+</small></div><ul class="features"><li>Landing page</li><li>Business website</li><li>Premium custom site</li></ul><a class="btn primary" href="#contact">Enquire</a></div>
+<div class="card"><div class="type">Social Media Management</div><h3>Basic / Standard / Premium</h3><div class="price">₹499 <small>/ ₹1,499 / ₹2,999+/month</small></div><ul class="features"><li>Basic support</li><li>Content management</li><li>Full management</li></ul><a class="btn primary" href="#contact">Enquire</a></div>
+</div></div></section>
+
+<section id="work"><div class="wrap">
+<div class="head"><span>Selected work</span><h2>Portfolio</h2><p>Add your own work images below. The slideshow will work automatically.</p></div>
+<div class="filters"><button class="filter active" data-cat="all">All</button><button class="filter" data-cat="branding">Branding</button><button class="filter" data-cat="social">Social</button><button class="filter" data-cat="realestate">Real Estate</button><button class="filter" data-cat="invitation">Invitation</button><button class="filter" data-cat="web">Web</button></div>
+<div class="slider"><div class="track" id="track">
+<div class="slide" data-cat="branding"><img src="portfolio-01.jpg" alt="Branding work"><div class="caption">Branding & Identity</div></div>
+<div class="slide" data-cat="social"><img src="portfolio-02.jpg" alt="Social media work"><div class="caption">Social Media Design</div></div>
+<div class="slide" data-cat="social"><img src="portfolio-03.jpg" alt="Social media work"><div class="caption">Social Media Creative</div></div>
+<div class="slide" data-cat="realestate"><img src="portfolio-04.jpg" alt="Real estate work"><div class="caption">Real Estate Visual</div></div>
+<div class="slide" data-cat="invitation"><img src="portfolio-05.jpg" alt="Invitation work"><div class="caption">Wedding Invitation</div></div>
+<div class="slide" data-cat="web"><img src="portfolio-06.jpg" alt="Website work"><div class="caption">Website Design</div></div>
+<div class="slide" data-cat="branding"><img src="portfolio-07.jpg" alt="Branding work"><div class="caption">Logo Design</div></div>
+<div class="slide" data-cat="social"><img src="portfolio-08.jpg" alt="Social media work"><div class="caption">Campaign Creative</div></div>
+<div class="slide" data-cat="realestate"><img src="portfolio-09.jpg" alt="Real estate work"><div class="caption">Property Creative</div></div>
+<div class="slide" data-cat="invitation"><img src="portfolio-10.jpg" alt="Invitation work"><div class="caption">Event Invitation</div></div>
+<div class="slide" data-cat="web"><img src="portfolio-11.jpg" alt="Website work"><div class="caption">Business Website</div></div>
+<div class="slide" data-cat="social"><img src="portfolio-12.jpg" alt="Social media work"><div class="caption">Social Media Campaign</div></div>
+</div></div>
+<div class="controls"><button class="circle" id="prev">‹</button><button class="circle" id="next">›</button></div>
+</div></section>
+
+<section id="process"><div class="wrap"><div class="head"><span>How it works</span><h2>Simple Process</h2></div>
+<div class="steps"><div class="card step" data-n="1"><h3>Discuss</h3><p>Tell us your idea and requirements.</p></div><div class="card step" data-n="2"><h3>Plan</h3><p>We create a clear creative direction.</p></div><div class="card step" data-n="3"><h3>Create</h3><p>Our team develops the final design.</p></div><div class="card step" data-n="4"><h3>Deliver</h3><p>Receive polished, ready-to-use files.</p></div></div></div></section>
+
+<section id="about"><div class="wrap"><div class="head"><span>About CRAVIO</span><h2>Creative Thinking + AI</h2></div><div class="about">
+<div class="card"><h3>CRAVIO.AI</h3><p>CRAVIO stands for Creative • Vision • AI. We combine creative design thinking with AI-assisted workflows to build modern digital content and business solutions.</p></div>
+<div class="card"><h3>Our Focus</h3><p>Branding, designing, editing, marketing and developing digital experiences that are clear, modern and useful for growing businesses.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="card contact"><div class="head"><span>Let's work together</span><h2>Have a project in mind?</h2><p>Send your requirements and let's discuss your project.</p></div>
+<div class="contact-links"><a class="contact-link" href="https://wa.me/916295637176" target="_blank">WhatsApp</a><a class="contact-link" href="mailto:cravio2026@gmail.com">cravio2026@gmail.com</a><a class="contact-link" href="https://instagram.com/crav.ioai" target="_blank">@crav.ioai</a></div>
+</div></div></section>
+</main>
+<footer><p>© 2026 <strong>CRAVIO.AI</strong> — Creative • Vision • AI</p><p>Turning Ideas Into Digital Reality.</p></footer>
+<button id="top" onclick="scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+const menu=document.getElementById("menu"),nav=document.getElementById("nav");
+menu.onclick=()=>nav.classList.toggle("open");
+document.querySelectorAll("nav a").forEach(a=>a.onclick=()=>nav.classList.remove("open"));
+let slides=[...document.querySelectorAll(".slide")],index=0,track=document.getElementById("track");
+function show(){track.style.transform=`translateX(-${index*100}%)`}
+document.getElementById("next").onclick=()=>{index=(index+1)%slides.length;show()};
+document.getElementById("prev").onclick=()=>{index=(index-1+slides.length)%slides.length;show()};
+let timer=setInterval(()=>{index=(index+1)%slides.length;show()},4000);
+document.querySelectorAll(".filter").forEach(btn=>btn.onclick=()=>{
+document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));btn.classList.add("active");
+let cat=btn.dataset.cat;slides.forEach(s=>s.style.display=cat==="all"||s.dataset.cat===cat?"block":"none");
+slides=slides.filter(s=>s.style.display!=="none");index=0;track.style.transform="translateX(0)";
+});
+window.onscroll=()=>document.getElementById("top").style.display=scrollY>500?"block":"none";
+</script>
+</body>
+</html>
